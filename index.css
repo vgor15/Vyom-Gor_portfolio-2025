@@ -1,0 +1,167 @@
+/* Style for the project title */
+.section-heading {
+  font-size: 1.8em; /* Larger font size */
+  font-weight: bold;
+  color: #1a73e8; /* Blue color */
+  margin-bottom: 10px;
+  position: relative;
+}
+
+/* Add a decorative line under the title */
+.section-heading::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #1a73e8;
+  margin-top: 5px;
+}
+
+/* Style for project description */
+.section-text {
+  font-size: 1.1em;
+  color: #333; /* Dark grey */
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* Add spacing between the text and image */
+.project-link {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+/* Style for project image with controlled size */
+.project-image {
+  width: 100%; /* Make the image responsive */
+  max-width: 300px; /* Adjust the max-width to make the image smaller */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0 auto; /* Center the image horizontally */
+  display: block; /* Ensure the image is displayed as a block element */
+}
+
+/* Hover effect for the image */
+.project-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Style for the link */
+.project-link:hover .project-image {
+  opacity: 0.8;
+}
+
+/* Contact form  */
+
+/* Apply light theme colors to the form */
+.contact-form-wrapper {
+  margin-top: 50px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: var(--color-background-light); /* Light cream background */
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideIn 1s forwards;
+}
+
+/* Slide-in animation */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Styling the form fields */
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form .form-control {
+  width: 100%;
+  padding: 12px;
+  font-size: 1em;
+  border-radius: 8px;
+  border: 1px solid var(--color-pink); /* Use the pink accent color for borders */
+  background-color: var(--color-background-light); /* Light cream background */
+  transition: all 0.3s ease;
+  opacity: 0;
+  animation: fadeIn 0.6s 0.3s forwards;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Focus effect */
+.contact-form .form-control:focus {
+  border-color: var(--color-green); /* Green color for focus */
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(122, 208, 172, 0.6);
+  outline: none;
+}
+
+/* Submit button */
+.contact-form button {
+  padding: 12px 25px;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 50px;
+  background-color: var(--color-pink); /* Light pink background */
+  color: white;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  animation: fadeIn 0.6s 0.9s forwards;
+}
+
+/* Hover effect for submit button */
+.contact-form button:hover {
+  background-color: var(--color-green); /* Darker green on hover */
+  cursor: pointer;
+  transform: translateY(-3px); /* Subtle button lift */
+}
+
+/* Active effect for button */
+.contact-form button:active {
+  transform: translateY(1px); /* Button presses down slightly */
+}
+
+/* Textarea */
+.contact-form textarea {
+  height: 150px;
+  resize: none;
+  padding-top: 12px;
+  background-color: var(
+    --color-blue-light
+  ); /* Light blue background for textarea */
+  border: 1px solid var(--color-blue-light); /* Light blue border */
+}
+
+/* Hover effect for inputs */
+.contact-form .form-group input:hover,
+.contact-form .form-group textarea:hover {
+  border-color: var(--color-pink);
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(229, 161, 170, 0.5);
+}
+
+.contact-form .form-group input,
+.contact-form .form-group textarea:focus {
+  background-color: #fff;
+}
